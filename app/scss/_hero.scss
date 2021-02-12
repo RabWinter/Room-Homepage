@@ -1,0 +1,91 @@
+.hero {
+ padding: 4rem 2rem;
+ position: relative;
+
+ @include breakpoint-up(large) {
+  padding: 0;
+  display: flex;
+  align-items: center;
+ }
+
+ &__content--wrap {
+  @include breakpoint-up(large) {
+   padding-left: 4rem;
+   padding-right: 2rem;
+   height: 20.625rem;
+  }
+ }
+
+ &__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding-bottom: 1.2rem;
+
+  @include breakpoint-up(large) {
+   font-size: 2.25rem;
+   padding-bottom: 1.6rem;
+  }
+ }
+
+ &__text {
+  padding-bottom: 2.2rem;
+
+  @include breakpoint-up(large) {
+   padding-right: 1rem;
+  }
+ }
+
+ &__shop {
+  width: 18rem;
+ }
+
+ a {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+  color: $black;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  background-color: transparent;
+  z-index: 1;
+
+  &:hover {
+   color: $darkGray;
+
+   > button:first-child {
+    opacity: 30%;
+   }
+  }
+ }
+
+ .arrow {
+  position: absolute;
+  left: 60%;
+  height: 1rem;
+  width: 2.7rem;
+  background-image: url("/images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 100%;
+  cursor: pointer;
+
+  &:active {
+   transform: translateX(50%);
+  }
+ }
+
+ button {
+  transition: all 200ms ease-in-out;
+  border: 0;
+ }
+}
+
+.hero__toggle--content {
+ display: none;
+}
+
+.hero__toggle--content.active {
+ display: block;
+}
