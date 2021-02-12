@@ -18,8 +18,8 @@ nav {
  opacity: 1;
  min-height: 22.5rem;
  background-repeat: no-repeat;
- background-size: 100% 22.5rem;
- background-position: top left;
+ background-size: cover;
+ background-position: center;
  transition: 200ms ease-in-out;
 }
 
@@ -31,7 +31,7 @@ nav {
  .slide-dt.active {
   opacity: 1;
   background-repeat: no-repeat;
-  background-size: 100% 33rem;
+  background-size: cover;
   min-height: 33rem;
   transition: 200ms ease-in-out;
  }
