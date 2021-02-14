@@ -1,0 +1,79 @@
+.overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background-color: hsla(0, 0%, 0%, 0.493);
+ z-index: 1;
+
+ @include breakpoint-up(large) {
+  display: none;
+ }
+}
+
+// Arrows Left & Right
+.arrows__toggle-1 {
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ display: flex;
+ height: 3.4rem;
+ width: 8rem;
+
+ button {
+  border: 0;
+ }
+
+ button.arrows__toggle--left-1,
+ button.arrows__toggle--right-1 {
+  height: 3.4rem;
+  width: 4rem;
+  background-color: $black;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+   background-color: rgba(83, 83, 83, 0.849);
+  }
+
+  &:active {
+   background-color: rgba(255, 255, 255, 0.452);
+  }
+ }
+}
+
+////////////////////////////////////////
+@include breakpoint-up(large) {
+ .arrows__toggle-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: 4.9125rem;
+  width: 9.825rem;
+  background-color: $black;
+
+  button {
+   border: 0;
+  }
+
+  button.arrows__toggle--left-2,
+  button.arrows__toggle--right-2 {
+   height: 4.9125rem;
+   width: 4.9625rem;
+   background-color: $black;
+   background-repeat: no-repeat;
+   background-position: center;
+   cursor: pointer;
+
+   &:hover {
+    background-color: rgba(83, 83, 83, 0.849);
+   }
+
+   &:active {
+    background-color: rgba(255, 255, 255, 0.781);
+   }
+  }
+ }
+}
