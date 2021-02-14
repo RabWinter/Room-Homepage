@@ -1,0 +1,77 @@
+.hero {
+ padding: 4rem 2rem;
+ position: relative;
+
+ @include breakpoint-up(large) {
+  padding: 0;
+  display: flex;
+  align-items: center;
+ }
+
+ &__content--wrap {
+  @include breakpoint-up(large) {
+   padding-left: 4rem;
+   padding-right: 4rem;
+  }
+ }
+
+ &__title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding-bottom: 1.2rem;
+
+  @include breakpoint-up(large) {
+   font-size: 2.25rem;
+   padding-bottom: 1.4rem;
+  }
+ }
+
+ &__text {
+  padding-bottom: 2rem;
+ }
+
+ &__shop {
+  width: 18rem;
+  height: 2rem;
+
+  &:hover {
+   color: $darkGray;
+  }
+ }
+
+ .link {
+  width: 100%;
+  height: 2rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+  color: $black;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  background-color: transparent;
+  z-index: 1;
+ }
+
+ .link:hover {
+  color: $darkGray;
+ }
+
+ .link__arrow {
+  position: absolute;
+  left: 10rem;
+ }
+
+ .link:hover .link__arrow {
+  fill: $darkGray;
+  transition: all 200ms ease-in-out;
+ }
+}
+
+.hero__toggle--content {
+ display: none;
+}
+
+.hero__toggle--content.active {
+ display: block;
+}

@@ -1,0 +1,91 @@
+html {
+ font-size: 100%;
+ box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+ padding: 0;
+ margin: 0;
+}
+
+h1,
+h2,
+p {
+ padding: 0;
+ margin: 0;
+}
+
+p {
+ line-height: 1.8;
+ color: $darkGray;
+}
+
+a {
+ text-decoration: none;
+ color: $black;
+}
+
+body {
+ font-family: "Spartan", sans-serif;
+ font-size: $fontSize;
+ font-weight: 500;
+ height: 100%;
+}
+
+// Flex Box
+.flex-jc-sb-ai {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+// Hide for Desktop
+@include breakpoint-up(medium) {
+ .hide-dt {
+  display: none;
+ }
+}
+
+@include breakpoint-up(large) {
+ .hide-big {
+  display: none;
+ }
+}
+
+// Hide for Mobile {
+@include breakpoint-down(large) {
+ .hide-mobile {
+  display: none;
+ }
+}
+
+// Display Tablet
+@include breakpoint-up(medium) {
+ .display-tablet {
+  display: block;
+ }
+}
+
+// Padding Sides
+.padding-sides {
+ padding: 0 2rem;
+}
+
+// Grid
+.top-grid {
+ display: grid;
+ @include breakpoint-up(large) {
+  grid-template-columns: 0.584fr 0.416fr;
+  grid-template-rows: 33rem;
+ }
+}
+
+.bottom-grid {
+ display: grid;
+ @include breakpoint-up(large) {
+  grid-template-columns: 0.2916fr 0.4027fr 0.305fr;
+  grid-template-rows: 16.625rem;
+ }
+}
